@@ -16,6 +16,8 @@ Character::Character(std::string name)
 
 Character::Character(Character &copy)
 {
+	for(int i=0; i < 4;i++)
+		slots[i] = NULL;
 	(*this) = copy;
 }
 
