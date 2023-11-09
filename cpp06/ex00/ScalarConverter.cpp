@@ -34,11 +34,11 @@ void is_float(std::string &ref)
 
         else if (isprint(c))
                 std::cout << "Char : '" << c <<"'" << std::endl;
-        else if (ref == "-inf" || ref == "+inf" || ref == "nan")
+        else if (ref == "-inff" || ref == "+inff" || ref == "nanf")
             std::cout << "Char: impossible" <<std::endl;
         else
             std::cout << "Char: Non diplayable" <<std::endl;
-        if (ref == "-inf" || ref == "+inf" || ref == "nan")
+        if (ref == "-inff" || ref == "+inff" || ref == "nanf")
             std::cout << "Int : " << "impossible" << std::endl;
         else
             std::cout << "Int : " << x << std::endl;
