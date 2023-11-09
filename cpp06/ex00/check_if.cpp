@@ -52,7 +52,7 @@ bool is_it_int(std::string &ref)
     int i = 0;
     while (ref[i])
     {
-        if (ref[i] == '-' || ref[i] == '+')
+        if (ref[0] == '-' || ref[0] == '+')
             i++;
         if (isdigit(ref[i]))
             i++;
