@@ -1,37 +1,32 @@
 #include "iter.hpp"
-
-
-
-int main()
+class Awesome
 {
-    std::string *ptr = new std::string[10];
-       ptr[0] = "str";
-    int *ntr = new int[10];
-       ntr[0] = 10;
-    float *str = new float[10];
-       str[0] = 2.25f; 
-    std::string dst;
-    if(!std::getline(std::cin, dst))
-        return 0;
-    if (dst == "int")
-    {
-            iter(ntr, 10, inter);
-                    for (int i = 0; i < 10; i++)
-            std::cout << ntr[i] << " | ";
-    }
-    else if (dst == "float")
-    {   
-        iter (str, 10, inter);
-            for (int i = 0; i < 10; i++)
-            std::cout << str[i] << " | ";
-    }
-    else
-    {
-            iter(ptr, 10 , inter);
-            for (int i = 0; i < 10; i++)
-            std::cout << ptr[i] << " | ";
-    }
-    delete[] ptr;
-    delete[] ntr;
-    delete[] str;
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
+}
+
+template< typename T >
+void print( T& x )
+{
+  std::cout << x << std::endl;
+  return;
+}
+
+int main() {
+  int tab[] = { 0, 1, 2, 3, 4 };
+  Awesome tab2[5];
+
+  iter( tab, 5, print<const int> );
+  iter( tab2, 5, print<Awesome> );
+
+  return 0;
 }
