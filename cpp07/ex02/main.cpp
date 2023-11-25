@@ -3,13 +3,14 @@
 
 int main()
 {
-    const Array<int > g(3) ;
-   
-   // g.setArr(0);
+     Array<int > g(3);
+    const Array<int > a(3);
+     
+    g.setArr(0);
    try
     {
      for(int i= 0; i < 3 ; i++)
-        {std::cout << "["<< i <<"]: "<< g[i] << "\n";}
+        {std::cout << "["<< i <<"]: "<< g[i] << a[i] << "\n";}
     }
    catch(const std::exception& e)
    {
