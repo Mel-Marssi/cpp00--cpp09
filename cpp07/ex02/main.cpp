@@ -3,14 +3,12 @@
 
 int main()
 {
-    Array<std::string > g(5) ;
-    Array <int > x(5);
-    g.setArr("f");
-    x.setArr(0);
+    Array<char > g ;
+   // g.setArr(0);
    try
     {
      for(int i= 0; i < 50 ; i++)
-        {std::cout << "["<< i <<"]: "<< g[i] << x[i] << "\n";}
+        {std::cout << "["<< i <<"]: "<< g[i] << "\n";}
     }
    catch(const std::exception& e)
    {

@@ -1,8 +1,8 @@
-NAME=Array
+NAME=span
 CXX=c++
-CXXFLAGS= -fsanitize=address -Wall -Wextra -Werror -std=c++98
-FILE=main.cpp
-INCLUDE=Array.hpp
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98
+FILE=Span.cpp main.cpp
+INCLUDE=Span.hpp
 OBJ=$(FILE:.cpp=.o)
 
 all: $(NAME)

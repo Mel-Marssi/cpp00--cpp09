@@ -1,8 +1,8 @@
-NAME=Array
+NAME=easy
 CXX=c++
-CXXFLAGS= -fsanitize=address -Wall -Wextra -Werror -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 FILE=main.cpp
-INCLUDE=Array.hpp
+INCLUDE=easyfind.hpp
 OBJ=$(FILE:.cpp=.o)
 
 all: $(NAME)

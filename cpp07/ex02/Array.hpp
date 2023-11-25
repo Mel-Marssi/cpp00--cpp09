@@ -40,7 +40,7 @@ class Array
 
             return (*this);
         }
-        T &operator[](long long index)
+        T &operator[](long long index) const
         {
             if (index >= size_arr || index < 0)
                 throw std::runtime_error(" index out of bounds! ");

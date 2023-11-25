@@ -1,8 +1,8 @@
-NAME=Array
+NAME=Stack
 CXX=c++
-CXXFLAGS= -fsanitize=address -Wall -Wextra -Werror -std=c++98
-FILE=main.cpp
-INCLUDE=Array.hpp
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98
+FILE= main.cpp
+INCLUDE= MutantStack.hpp
 OBJ=$(FILE:.cpp=.o)
 
 all: $(NAME)
