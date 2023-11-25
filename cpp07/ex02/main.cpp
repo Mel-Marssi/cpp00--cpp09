@@ -3,11 +3,12 @@
 
 int main()
 {
-    Array<char > g ;
+    const Array<int > g(3) ;
+   
    // g.setArr(0);
    try
     {
-     for(int i= 0; i < 50 ; i++)
+     for(int i= 0; i < 3 ; i++)
         {std::cout << "["<< i <<"]: "<< g[i] << "\n";}
     }
    catch(const std::exception& e)
