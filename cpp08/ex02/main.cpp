@@ -3,7 +3,8 @@
 int main()
 {
 	MutantStack<int> mstack;
-MutantStack<int> s(mstack);
+	MutantStack<int> s(mstack);
+	// s = mstack;
 	mstack.push(5);
 	mstack.push(17);
 	std::cout <<mstack.top() << std::endl;

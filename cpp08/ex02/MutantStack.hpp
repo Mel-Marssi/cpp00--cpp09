@@ -18,11 +18,11 @@ class MutantStack: public std::stack<T, cont>
 		}
 		MutantStack &operator=(MutantStack const &copy)
 		{
-			(void)copy;
+			this->c = copy.c;
 			return (*this);
 		}
-		// typedef typename std::stack<T>::container_type::iterator iterator;
-		typedef typename cont::iterator iterator;
+		typedef typename std::stack<T>::container_type::iterator iterator;
+		// typedef typename cont::iterator iterator;
 		iterator begin()
 		{
 			return this->c.begin();
