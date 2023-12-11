@@ -1,22 +1,18 @@
-NAME=Fragtrap
+NAME=RPN
 CXX=c++
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
-INCLUDE=ClapTrap.hpp FragTrap.hpp
-FILE=ClapTrap.cpp\
-	FragTrap.cpp\
+INCLUDE=RPN.hpp
+FILE=RPN.cpp\
 	main.cpp
-
 OBJ=$(FILE:.cpp=.o)
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(NAME) $(OBJ)
+$(NAME):$(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 $(OBJ):$(INCLUDE)
+
 clean:
 	rm -rf $(OBJ)
-
-fclean: clean
+fclean:clean
 	rm -rf $(NAME)
-
-re: fclean all
+re:fclean all
