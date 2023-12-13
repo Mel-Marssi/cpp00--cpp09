@@ -23,12 +23,12 @@ class Array
             arr = new T[n]();
             size_arr = n;
         }
-        Array(Array &copy)
+        Array(const Array &copy)
         {
             arr = NULL;
             (*this) = copy;
         }
-        Array &operator=(Array &copy)
+        Array &operator=(const Array &copy)
         {
             if(arr != NULL)
                delete[] arr;

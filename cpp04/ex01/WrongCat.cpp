@@ -6,12 +6,12 @@ WrongCat::WrongCat()
 	type = "WrongCat";
 }
 
-WrongCat::WrongCat(WrongCat &copy)
+WrongCat::WrongCat(const WrongCat &copy)
 {
 	(*this) = copy;
 }
 
-WrongCat &WrongCat::operator=(WrongCat &copy)
+WrongCat &WrongCat::operator=(const WrongCat &copy)
 {
 	type =  copy.type;
 	return (*this);

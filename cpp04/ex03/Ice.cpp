@@ -4,14 +4,12 @@
 Ice::Ice() : AMateria("ice")
 {}
 
-Ice::Ice(Ice &copy)
+Ice::Ice(const Ice &copy)
 {
 	(*this) = copy;
 }
 
-
-
-Ice &Ice::operator=(Ice &copy)
+Ice &Ice::operator=(const Ice &copy)
 {
 	this->type = copy.type;
 	return(*this);

@@ -6,12 +6,12 @@ WrongAnimal::WrongAnimal()
 	type = "WrongAnimal";
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal &copy)
+WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
 	(*this) = copy;
 }
 
-WrongAnimal &WrongAnimal::operator=(WrongAnimal &copy)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &copy)
 {
 	type =  copy.type;
 	return (*this);

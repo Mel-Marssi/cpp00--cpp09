@@ -8,12 +8,12 @@ ScavTrap::ScavTrap()
 	this->AttackDamage=20;
 }
 
-ScavTrap::ScavTrap(ScavTrap &copy)
+ScavTrap::ScavTrap(const ScavTrap &copy)
 {
 	*this = copy;
 }
 
-ScavTrap &ScavTrap::operator=(ScavTrap &copy)
+ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
 {
 	this->name = copy.name;
 	this->AttackDamage = copy.AttackDamage;

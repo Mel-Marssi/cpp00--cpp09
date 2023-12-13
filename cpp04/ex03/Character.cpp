@@ -14,7 +14,7 @@ Character::Character(std::string name)
 		slots[i] = NULL;
 }
 
-Character::Character(Character &copy)
+Character::Character(const Character &copy)
 {
 	for(int i=0; i < 4;i++)
 		slots[i] = NULL;
@@ -56,7 +56,7 @@ void Character::use(int idx, ICharacter &target)
 	}
 }
 
-Character &Character::operator=(Character &copy)
+Character &Character::operator=(const Character &copy)
 {
 	for(int i = 0; i < 4 ; i++)
 	{

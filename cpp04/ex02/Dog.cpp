@@ -7,12 +7,12 @@ Dog::Dog()
 	ptr = new Brain();
 }
 
-Dog::Dog(Dog &copy)
+Dog::Dog(const Dog &copy)
 {
 	*this=copy;
 }
 
-Dog &Dog::operator=(Dog &copy)
+Dog &Dog::operator=(const Dog &copy)
 {
 	if (this->ptr)
 		delete ptr;

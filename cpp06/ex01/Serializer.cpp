@@ -1,8 +1,8 @@
 #include "Serializer.hpp"
 
 Serializer::Serializer(){}
-Serializer::Serializer(Serializer &copy){(void)copy;}
-Serializer &Serializer::operator=(Serializer &copy)
+Serializer::Serializer(const Serializer &copy){(void)copy;}
+Serializer &Serializer::operator=(const Serializer &copy)
 {
     (void )copy;
     return (*this);

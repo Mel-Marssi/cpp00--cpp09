@@ -1,17 +1,19 @@
 #include "MateriaSource.hpp"
 
+LinkedList MateriaSource::node;
+
 MateriaSource::MateriaSource()
 {
 	for(int i=0 ; i<4 ; i++)
 		slots[i] = NULL;
 }
 
-MateriaSource::MateriaSource(MateriaSource &copy)
+MateriaSource::MateriaSource(const MateriaSource &copy)
 {
 	(*this) = copy;
 }
 
-MateriaSource &MateriaSource::operator=(MateriaSource &copy)
+MateriaSource &MateriaSource::operator=(const MateriaSource &copy)
 {
 	for(int i = 0; i < 4 ; i++)
 	{
@@ -66,5 +68,5 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 
 MateriaSource::~MateriaSource()
 {
-	FreeLinked(node);
+	//FreeLinked(node); //static member doesn't need to bee freed."data segment..."
 }

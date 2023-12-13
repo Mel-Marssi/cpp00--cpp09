@@ -7,12 +7,12 @@ Cat::Cat()
 	ptr = new Brain();
 }
 
-Cat::Cat(Cat &copy)
+Cat::Cat(const Cat &copy)
 {
 	*this=copy;
 }
 
-Cat &Cat::operator=(Cat &copy)
+Cat &Cat::operator=(const Cat &copy)
 {
 	if (this->ptr)
 		delete ptr;

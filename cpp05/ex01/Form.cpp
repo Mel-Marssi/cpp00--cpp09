@@ -15,13 +15,13 @@ Form::Form(std::string nom, int a, int b):name(nom), Grade_to_sign(a), Grade_to_
 		throw (GradeTooLowException());
 }
 
-Form::Form(Form &copy): name(copy.name), Grade_to_sign(copy.Grade_to_sign), Grade_to_execute(copy.Grade_to_execute)
+Form::Form(const Form &copy): name(copy.name), Grade_to_sign(copy.Grade_to_sign), Grade_to_execute(copy.Grade_to_execute)
 {
 	(*this) = copy;
 }
 
 
-Form &Form::operator=(Form &copy)
+Form &Form::operator=(const Form &copy)
 {
 	this->is_it_signed = copy.is_it_signed;
 	return (*this);

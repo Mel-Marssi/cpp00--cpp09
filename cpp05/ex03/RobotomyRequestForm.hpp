@@ -10,8 +10,8 @@ class  RobotomyRequestForm: public AForm
 	public:
 	 RobotomyRequestForm();
 	 RobotomyRequestForm(std::string name);
-	 RobotomyRequestForm( RobotomyRequestForm &copy);
-	 RobotomyRequestForm &operator=( RobotomyRequestForm &copy);
+	 RobotomyRequestForm(const  RobotomyRequestForm &copy);
+	 RobotomyRequestForm &operator=( const RobotomyRequestForm &copy);
 	void execute(Bureaucrat const &executor)const ;
 	~ RobotomyRequestForm();
 };

@@ -2,11 +2,11 @@
 
 Intern::Intern(){}
 
-Intern::Intern(Intern &copy){
+Intern::Intern(const Intern &copy){
 	(void) copy;
 }
 
-Intern &Intern::operator=(Intern &copy)
+Intern &Intern::operator=(const Intern &copy)
 {
 	(void) copy;
 	return(*this);

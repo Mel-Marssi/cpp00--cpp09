@@ -2,8 +2,8 @@
 
 ScalarConverter::ScalarConverter(){}
 ScalarConverter::~ScalarConverter(){}
-ScalarConverter::ScalarConverter(ScalarConverter &copy){(void)copy;}
-ScalarConverter &ScalarConverter::operator=(ScalarConverter &copy)
+ScalarConverter::ScalarConverter(const ScalarConverter &copy){(void)copy;}
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &copy)
 {
     (void )copy;
     return (*this);

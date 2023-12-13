@@ -19,12 +19,12 @@ ClapTrap::ClapTrap(std::string name)
 	this->HitPoint = 10;
 }
 
-ClapTrap::ClapTrap(ClapTrap &copy)
+ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	(*this) = copy;
 }
 
-ClapTrap &ClapTrap::operator=(ClapTrap &copy)
+ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 {
 	this->AttackDamage = copy.AttackDamage;
 	this->EnergyPoint = copy.EnergyPoint;

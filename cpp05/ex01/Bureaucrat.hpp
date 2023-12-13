@@ -13,9 +13,9 @@ class  Bureaucrat
 		int grade;
 	public:
 		 Bureaucrat();
-		 Bureaucrat( Bureaucrat &copy);
+		 Bureaucrat(const Bureaucrat &copy);
 		 Bureaucrat(std::string nam, int gr);
-		 Bureaucrat &operator=(Bureaucrat &copy);
+		 Bureaucrat &operator=(const Bureaucrat &copy);
 		std::string const 	 getName() const;
 		int 				 getGrade() const;
 		void IncrementGrade();

@@ -15,13 +15,13 @@ AForm::AForm(std::string nom, int a, int b):name(nom), Grade_to_sign(a), Grade_t
 		throw (GradeTooLowException());
 }
 
-AForm::AForm(AForm &copy): name(copy.name), Grade_to_sign(copy.Grade_to_sign), Grade_to_execute(copy.Grade_to_execute)
+AForm::AForm(const AForm &copy): name(copy.name), Grade_to_sign(copy.Grade_to_sign), Grade_to_execute(copy.Grade_to_execute)
 {
 	(*this) = copy;
 }
 
 
-AForm &AForm::operator=(AForm &copy)
+AForm &AForm::operator=(const AForm &copy)
 {
 	this->is_it_signed = copy.is_it_signed;
 	return (*this);

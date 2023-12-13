@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap()
 	EnergyPoint = 50;
 	AttackDamage = 30;
 }
-DiamondTrap::DiamondTrap(DiamondTrap &copy)
+DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 {
 	(*this) = copy;
 }
@@ -29,7 +29,7 @@ void DiamondTrap::WhoAmI()
 	std::cout << "ClapTrap name: " << ClapTrap::name << std::endl;
 }
 
-DiamondTrap &DiamondTrap::operator=(DiamondTrap &copy)
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy)
 {
 	this->name = copy.name;
 	this->HitPoint = copy.HitPoint;

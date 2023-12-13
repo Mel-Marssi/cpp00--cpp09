@@ -24,7 +24,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string name): AForm("Shrubbery", 7
 		target = name;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &copy) :AForm(copy)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy) :AForm(copy)
 {
 	*this =  copy;
 }
@@ -44,7 +44,7 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 }
 
 
-RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm &copy)
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &copy)
 {
 	target = copy.target;
 	return (*this);

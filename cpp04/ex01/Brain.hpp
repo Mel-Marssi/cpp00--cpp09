@@ -9,7 +9,7 @@ class Brain
 	public:
 		
 		Brain();
-		Brain(Brain &copy);
-		Brain &operator=(Brain &copy);
+		Brain(const Brain &copy);
+		Brain &operator=(const Brain &copy);
 		~Brain();
 };

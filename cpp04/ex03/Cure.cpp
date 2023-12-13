@@ -5,12 +5,12 @@ Cure::Cure() : AMateria("cure")
 {
 }
 
-Cure::Cure(Cure &copy)
+Cure::Cure(const Cure &copy)
 {
 	(*this) = copy;
 }
 
-Cure &Cure::operator=(Cure &copy)
+Cure &Cure::operator=(const Cure &copy)
 {
 	this->type = copy.type;
 	return(*this);

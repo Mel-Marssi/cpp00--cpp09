@@ -9,12 +9,12 @@ FragTrap::FragTrap()
 	this->AttackDamage= 30;
 }
 
-FragTrap::FragTrap(FragTrap &copy)
+FragTrap::FragTrap(const FragTrap &copy)
 {
 	*this = copy;
 }
 
-FragTrap &FragTrap::operator=(FragTrap &copy)
+FragTrap &FragTrap::operator=(const FragTrap &copy)
 {
 	this->name = copy.name;
 	this->AttackDamage = copy.AttackDamage;

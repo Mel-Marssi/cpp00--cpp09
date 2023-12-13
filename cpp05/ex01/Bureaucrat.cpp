@@ -14,12 +14,12 @@ Bureaucrat::Bureaucrat(std::string nam, int gr) :name(nam)
 		throw (GradeTooLowException());
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat &copy)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
 	(*this) = copy;
 }
 
-Bureaucrat &Bureaucrat::operator=(Bureaucrat &copy)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy)
 {
 	this->grade = copy.grade;
 	return(*this);

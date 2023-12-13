@@ -9,8 +9,8 @@ class Cat : public Animal
 		Brain *ptr;
 	public:
 		Cat();
-		Cat(Cat &copy);
-		Cat &operator=(Cat &copy);
+		Cat(const Cat &copy);
+		Cat &operator=(const Cat &copy);
 		void makeSound() const;
 		~Cat();
 };

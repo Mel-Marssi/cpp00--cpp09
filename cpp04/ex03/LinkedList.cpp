@@ -12,11 +12,11 @@ Tdata *materia_data(AMateria *m)
 		data = NULL;
 		next = NULL;
 	}
-	Tdata::Ldata(Ldata &copy){
+	Tdata::Ldata(const Ldata &copy){
 		*this = copy;
 	}
 	
-	 Tdata &Tdata::operator=(Ldata &copy){
+	 Tdata &Tdata::operator=(const Ldata &copy){
 		data = copy.data;
 		next = NULL;
 		return *this;
@@ -27,12 +27,12 @@ LinkedList::LinkedList()
 	head = NULL;
 }
 
-LinkedList::LinkedList(LinkedList &copy)
+LinkedList::LinkedList(const LinkedList &copy)
 {
 	*this = copy;
 }
 
-LinkedList &LinkedList::operator=(LinkedList &copy)
+LinkedList &LinkedList::operator=(const LinkedList &copy)
 {
 	this->head = copy.head;
 	return (*this);

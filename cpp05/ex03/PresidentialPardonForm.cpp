@@ -11,7 +11,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string name): AForm("Shrubbe
 	target = name;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &copy) :AForm(copy)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy) :AForm(copy)
 {
 	*this =  copy;
 }
@@ -28,7 +28,7 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 }
 
 
-PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm &copy)
+PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &copy)
 {
 	target = copy.target;
 	return (*this);

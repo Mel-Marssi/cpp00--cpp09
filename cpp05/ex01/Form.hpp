@@ -12,8 +12,8 @@ class Form
 	public:
 		Form();
 		Form(std::string nom, int a, int b);
-		Form(Form &copy);
-		Form &operator=(Form &copy);
+		Form(const Form &copy);
+		Form &operator=(const Form &copy);
 		void beSigned(Bureaucrat &emp);
 		bool get_signed() const;
 		const std::string getName() const;

@@ -6,12 +6,12 @@ Cat::Cat()
 	type = "Cat";
 }
 
-Cat::Cat(Cat &copy)
+Cat::Cat(const Cat &copy)
 {
 	(*this) = copy;
 }
 
-Cat &Cat::operator=(Cat &copy)
+Cat &Cat::operator=(const Cat &copy)
 {
 	type = copy.type;
 	return (*this);

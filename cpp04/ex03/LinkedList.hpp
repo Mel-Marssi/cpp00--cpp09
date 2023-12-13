@@ -8,8 +8,8 @@ typedef struct Ldata{
 	AMateria *data;
 	struct Ldata *next;
 	Ldata();
-	Ldata(Ldata &copy);
-	Ldata &operator=(Ldata &copy);
+	Ldata(const Ldata &copy);
+	Ldata &operator=(const Ldata &copy);
 }Tdata;
 
 Tdata *materia_data(AMateria *m);
@@ -20,8 +20,8 @@ class LinkedList
 	public:
 		Tdata *head;
 		LinkedList();
-		LinkedList(LinkedList &copy);
-		LinkedList &operator=(LinkedList &copy);
+		LinkedList(const LinkedList &copy);
+		LinkedList &operator=(const LinkedList &copy);
 		void insert(Tdata *new_data);
 		~LinkedList();
 };

@@ -10,7 +10,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string name): AForm("Shrubbery
 	target = name;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &copy) :AForm(copy)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy) :AForm(copy)
 {
 	*this =  copy;
 }
@@ -43,7 +43,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 }
 
 
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm &copy)
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &copy)
 {
 	
 	target = copy.target;

@@ -12,8 +12,8 @@ class AForm
 	public:
 		AForm();
 		AForm(std::string nom, int a, int b);
-		AForm(AForm &copy);
-		AForm &operator=(AForm &copy);
+		AForm(const AForm &copy);
+		AForm &operator=(const AForm &copy);
 		void beSigned(Bureaucrat &emp);
 		bool get_signed() const;
 		const std::string getName() const;

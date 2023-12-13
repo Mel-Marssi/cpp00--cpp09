@@ -11,8 +11,8 @@ class Intern
 {
 	public:
 		Intern();
-		Intern(Intern &copy);
-		Intern &operator=(Intern &copy);
+		Intern(const Intern &copy);
+		Intern &operator=(const Intern &copy);
 		~Intern();
 		AForm *makeForm(std::string className, std::string targetName);
 		class RequestNotValid:public std::exception

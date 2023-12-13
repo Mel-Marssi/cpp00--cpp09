@@ -10,7 +10,7 @@ AMateria::~AMateria()
 {
 
 }
-AMateria::AMateria(AMateria &copy)
+AMateria::AMateria(const AMateria &copy)
 {
 	(*this) = copy;
 }
@@ -20,7 +20,7 @@ AMateria::AMateria(std::string const &type)
 	this->type =  type;
 }
 
-AMateria &AMateria::operator=(AMateria &copy)
+AMateria &AMateria::operator=(const AMateria &copy)
 {
 	type = copy.type;
 	return (*this);

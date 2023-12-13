@@ -5,12 +5,12 @@ Bureaucrat::Bureaucrat() :name("Employee")
 	grade = 10;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat &copy): name(copy.name)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy): name(copy.name)
 {
 	(*this) = copy;
 }
 
-Bureaucrat &Bureaucrat::operator=(Bureaucrat &copy)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy)
 {
 	this->grade = copy.grade;
 	return(*this);
