@@ -79,6 +79,8 @@ bool check_atof(std::string value)
 bool BitcoinExchange::string_to_date(std::string time)
 {
 	date x;
+	if (time.size() <= 8)
+		return false;
 	x.year = atoi(strtok((char *)time.c_str(), "-"));
 	x.month = atoi(strtok((char *)&time.c_str()[5], "-"));
 	x.day = atoi(strtok((char *)&time.c_str()[8], "-"));
